@@ -42,65 +42,64 @@ export default function PlayerInfo({ name, id, job1, job2 }: PlayerInfoProps) {
         boxShadow: "0 0 0 1px rgba(255,255,255,0.04) inset, 0 20px 60px rgba(0,0,0,0.65), 0 0 30px rgba(180,77,255,0.1)",
       }}
     >
-      {/* Purple top shimmer */}
+      {/* Neon diagonal laser streaks — right corner */}
       <div
-        className="absolute top-0 left-0 right-0 h-px pointer-events-none"
-        style={{ background: "linear-gradient(90deg, transparent, rgba(180,77,255,0.55), transparent)" }}
-      />
-
-      {/* Neon diagonal laser streaks — right side behind logo */}
-      <div className="absolute inset-0 pointer-events-none overflow-hidden" style={{ borderRadius: "60px" }} aria-hidden="true">
-        {/* streak 1 — brightest, center */}
+        className="absolute inset-0 pointer-events-none overflow-hidden"
+        style={{ borderRadius: "60px" }}
+        aria-hidden="true"
+      >
+        {/* Wide glow sweep — background haze */}
+        <div style={{
+          position: "absolute",
+          width: "18px",
+          height: "400px",
+          top: "-200px",
+          right: "55px",
+          background: "linear-gradient(180deg, transparent 0%, rgba(140,0,255,0.35) 40%, rgba(180,77,255,0.2) 65%, transparent 100%)",
+          transform: "rotate(-42deg)",
+          transformOrigin: "center center",
+          filter: "blur(10px)",
+        }} />
+        {/* Streak 1 — outer soft ray */}
+        <div style={{
+          position: "absolute",
+          width: "3px",
+          height: "340px",
+          top: "-160px",
+          right: "74px",
+          background: "linear-gradient(180deg, transparent 0%, rgba(180,77,255,0.55) 40%, rgba(140,0,230,0.4) 70%, transparent 100%)",
+          boxShadow: "0 0 12px 5px rgba(160,40,255,0.3)",
+          transform: "rotate(-42deg)",
+          transformOrigin: "center center",
+          borderRadius: "2px",
+          opacity: 0.75,
+        }} />
+        {/* Streak 2 — main bright ray */}
         <div style={{
           position: "absolute",
           width: "2px",
-          height: "260px",
-          top: "-90px",
-          right: "62px",
-          background: "linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(220,130,255,1) 45%, rgba(180,77,255,1) 70%, rgba(130,0,255,0) 100%)",
-          boxShadow: "0 0 8px 2px rgba(180,77,255,0.9), 0 0 22px 6px rgba(140,0,255,0.55)",
+          height: "340px",
+          top: "-160px",
+          right: "58px",
+          background: "linear-gradient(180deg, transparent 0%, rgba(230,180,255,1) 38%, rgba(180,77,255,1) 62%, transparent 100%)",
+          boxShadow: "0 0 6px 3px rgba(200,100,255,0.95), 0 0 20px 8px rgba(160,50,255,0.5)",
           transform: "rotate(-42deg)",
           transformOrigin: "center center",
-          borderRadius: "1px",
-          opacity: 0.95,
+          borderRadius: "2px",
         }} />
-        {/* streak 2 — slightly offset left */}
+        {/* Streak 3 — inner soft ray */}
         <div style={{
           position: "absolute",
-          width: "1.5px",
-          height: "260px",
-          top: "-90px",
-          right: "45px",
-          background: "linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(180,77,255,0.85) 50%, rgba(120,0,220,0.7) 75%, rgba(90,0,180,0) 100%)",
-          boxShadow: "0 0 6px 2px rgba(160,50,255,0.7), 0 0 16px 5px rgba(120,0,240,0.35)",
+          width: "2.5px",
+          height: "340px",
+          top: "-160px",
+          right: "43px",
+          background: "linear-gradient(180deg, transparent 0%, rgba(190,90,255,0.7) 40%, rgba(130,0,210,0.45) 68%, transparent 100%)",
+          boxShadow: "0 0 10px 4px rgba(160,40,255,0.35)",
           transform: "rotate(-42deg)",
           transformOrigin: "center center",
-          borderRadius: "1px",
+          borderRadius: "2px",
           opacity: 0.8,
-        }} />
-        {/* streak 3 — outer, wider glow */}
-        <div style={{
-          position: "absolute",
-          width: "1px",
-          height: "260px",
-          top: "-90px",
-          right: "76px",
-          background: "linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(180,77,255,0.7) 50%, rgba(100,0,200,0.5) 75%, transparent 100%)",
-          boxShadow: "0 0 10px 4px rgba(140,0,255,0.5), 0 0 28px 10px rgba(100,0,200,0.25)",
-          transform: "rotate(-42deg)",
-          transformOrigin: "center center",
-          borderRadius: "1px",
-          opacity: 0.65,
-        }} />
-        {/* wide ambient purple glow blob behind logo */}
-        <div style={{
-          position: "absolute",
-          right: "-10px",
-          top: "-20px",
-          width: "130px",
-          height: "130px",
-          background: "radial-gradient(ellipse at 70% 30%, rgba(160,50,255,0.22) 0%, transparent 70%)",
-          pointerEvents: "none",
         }} />
       </div>
 
