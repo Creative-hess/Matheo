@@ -42,64 +42,58 @@ export default function PlayerInfo({ name, id, job1, job2 }: PlayerInfoProps) {
         boxShadow: "0 0 0 1px rgba(255,255,255,0.04) inset, 0 20px 60px rgba(0,0,0,0.65), 0 0 30px rgba(180,77,255,0.1)",
       }}
     >
-      {/* Neon diagonal laser streaks — right corner */}
+      {/* Neon diagonal laser streaks — confined to right corner behind logo */}
       <div
-        className="absolute inset-0 pointer-events-none overflow-hidden"
-        style={{ borderRadius: "60px" }}
+        className="absolute pointer-events-none overflow-hidden"
+        style={{
+          width: "140px",
+          top: 0,
+          bottom: 0,
+          right: 0,
+          borderRadius: "0 60px 60px 0",
+        }}
         aria-hidden="true"
       >
-        {/* Wide glow sweep — background haze */}
-        <div style={{
-          position: "absolute",
-          width: "18px",
-          height: "400px",
-          top: "-200px",
-          right: "55px",
-          background: "linear-gradient(180deg, transparent 0%, rgba(140,0,255,0.35) 40%, rgba(180,77,255,0.2) 65%, transparent 100%)",
-          transform: "rotate(-42deg)",
-          transformOrigin: "center center",
-          filter: "blur(10px)",
-        }} />
-        {/* Streak 1 — outer soft ray */}
-        <div style={{
-          position: "absolute",
-          width: "3px",
-          height: "340px",
-          top: "-160px",
-          right: "74px",
-          background: "linear-gradient(180deg, transparent 0%, rgba(180,77,255,0.55) 40%, rgba(140,0,230,0.4) 70%, transparent 100%)",
-          boxShadow: "0 0 12px 5px rgba(160,40,255,0.3)",
-          transform: "rotate(-42deg)",
-          transformOrigin: "center center",
-          borderRadius: "2px",
-          opacity: 0.75,
-        }} />
-        {/* Streak 2 — main bright ray */}
+        {/* Streak 1 — outer, soft */}
         <div style={{
           position: "absolute",
           width: "2px",
-          height: "340px",
-          top: "-160px",
-          right: "58px",
-          background: "linear-gradient(180deg, transparent 0%, rgba(230,180,255,1) 38%, rgba(180,77,255,1) 62%, transparent 100%)",
-          boxShadow: "0 0 6px 3px rgba(200,100,255,0.95), 0 0 20px 8px rgba(160,50,255,0.5)",
-          transform: "rotate(-42deg)",
-          transformOrigin: "center center",
+          height: "280px",
+          top: "-120px",
+          right: "88px",
+          background: "linear-gradient(180deg, transparent 0%, rgba(180,77,255,0.5) 45%, rgba(140,0,230,0.35) 72%, transparent 100%)",
+          boxShadow: "0 0 6px 2px rgba(160,40,255,0.4)",
+          transform: "rotate(-40deg)",
+          transformOrigin: "top center",
           borderRadius: "2px",
+          opacity: 0.7,
         }} />
-        {/* Streak 3 — inner soft ray */}
+        {/* Streak 2 — bright center line */}
         <div style={{
           position: "absolute",
-          width: "2.5px",
-          height: "340px",
-          top: "-160px",
-          right: "43px",
-          background: "linear-gradient(180deg, transparent 0%, rgba(190,90,255,0.7) 40%, rgba(130,0,210,0.45) 68%, transparent 100%)",
-          boxShadow: "0 0 10px 4px rgba(160,40,255,0.35)",
-          transform: "rotate(-42deg)",
-          transformOrigin: "center center",
+          width: "1.5px",
+          height: "280px",
+          top: "-120px",
+          right: "72px",
+          background: "linear-gradient(180deg, transparent 0%, rgba(240,200,255,1) 42%, rgba(190,80,255,1) 65%, transparent 100%)",
+          boxShadow: "0 0 5px 2px rgba(210,120,255,0.9), 0 0 14px 4px rgba(160,50,255,0.45)",
+          transform: "rotate(-40deg)",
+          transformOrigin: "top center",
           borderRadius: "2px",
-          opacity: 0.8,
+        }} />
+        {/* Streak 3 — inner, slightly softer */}
+        <div style={{
+          position: "absolute",
+          width: "2px",
+          height: "280px",
+          top: "-120px",
+          right: "57px",
+          background: "linear-gradient(180deg, transparent 0%, rgba(190,90,255,0.65) 45%, rgba(130,0,210,0.4) 70%, transparent 100%)",
+          boxShadow: "0 0 6px 2px rgba(160,40,255,0.35)",
+          transform: "rotate(-40deg)",
+          transformOrigin: "top center",
+          borderRadius: "2px",
+          opacity: 0.75,
         }} />
       </div>
 
