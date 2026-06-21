@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KF PauseMenu</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerrpolicy="no-referrer" />
+  <link rel="stylesheet" href="css/style.css?v=2">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      font-family: 'Quicksand', sans-serif;
+      background-color: rgba(17, 17, 17, 0.60);
+      color: white;
+      display: flex !important;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .container {
+      display: flex;
+      flex-direction: column;
+      width: 900px;
+      height: 600px;
+      gap: 15px;
+      color: black;
+      border-radius: 0px;
+      box-sizing: border-box;
+      align-items: center;
+      justify-content: center;
+      z-index: 10;
+    }
+  </style>
+</head>
+<body id="page">
+  <div class="container">
+    <div id="player-info" class="player-info">
+      <img src="images/guest.png" alt="" id="player-avatar" class="player-avatar">
+      <div class="player-text-infos">
+        <div class="left-data">
+          <div class="info-items">
+            <div class="info-item name-item">
+              <div class="info-header">
+                <i class="fa-solid fa-user info-icon"></i>
+                <span class="info-label">NOM : PRÉNOM</span>
+              </div>
+              <span class="info-value" id="player-name">Del Papa : Giuseppe</span>
+            </div>
+            <div class="info-item id-item">
+              <div class="info-header">
+                <i class="fa-solid fa-id-card info-icon"></i>
+                <span class="info-label">ID</span>
+              </div>
+              <span class="info-value" id="player-id-display">12345</span>
+            </div>
+            <div class="info-item job-item">
+              <div class="info-header">
+                <i class="fa-solid fa-briefcase info-icon"></i>
+                <span class="info-label">JOB 1</span>
+              </div>
+              <span class="info-value" id="job1name">Polizia - Agente</span>
+            </div>
+            <div class="info-item job-item">
+              <div class="info-header">
+                <i class="fa-solid fa-mask info-icon"></i>
+                <span class="info-label">JOB 2</span>
+              </div>
+              <span class="info-value" id="job2name">Criminale - Boss</span>
+            </div>
+          </div>
+        </div>
+        <!-- If you want to put a logo on the right, uncomment this and .server-logo class in style.css -->
+        <div class="right-data">
+          <img src="images/logo.png?v=4" alt="Logo" class="server-logo">
+        </div>
+      </div>
+      <div class="working-bars">
+      </div>
+    </div>
+    <div class="main-functions">
+      <div class="grid-layout">
+        <div class="map-large" id="map-btn">
+          <div class="background"></div>
+          <div class="map-items-container">
+            <span class="map-icon">
+              <i class="fa-solid fa-map-location-dot"></i>
+            </span>
+            <span class="map-label">CARTE</span>
+          </div>
+        </div>
+        <div class="buttons-grid">
+          <div class="menu-principal" id="menu-principal-btn">
+            <div class="background"></div>
+            <div class="menu-principal-items-container">
+              <span class="menu-principal-icon">
+                <i class="fa-solid fa-house"></i>
+              </span>
+            </div>
+          </div>
+          <div class="discord" id="discord-btn">
+            <div class="background"></div>
+            <div class="discord-items-container">
+              <span class="discord-icon">
+                <i class="fa-solid fa-scale-balanced"></i>
+              </span>
+            </div>
+          </div>
+          <div class="exit" id="exit-btn">
+            <div class="background"></div>
+            <div class="exit-items-container">
+              <span class="exit-icon">
+                <i class="fa-solid fa-arrow-right-from-bracket"></i>
+              </span>
+            </div>
+          </div>
+          <div class="settings" id="settings-btn">
+            <div class="background"></div>
+            <div class="settings-items-container">
+              <span class="settings-icon">
+                <i class="fa-solid fa-gear"></i>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-info">
+      <div class="paris-time">
+        <span class="time-icon">
+          <i class="fa-solid fa-clock"></i>
+        </span>
+        <span class="time-label">HEURE FLASHCITY</span>
+        <span class="time-value" id="paris-time">--:--</span>
+      </div>
+      <div class="discord-footer" id="discord-footer-btn">
+        <span class="discord-footer-icon">
+          <i class="fa-brands fa-discord"></i>
+        </span>
+        <span class="discord-footer-label">DISCORD</span>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
