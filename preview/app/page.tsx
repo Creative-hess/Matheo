@@ -44,24 +44,8 @@ export default function Home() {
   return (
     <main
       className="min-h-screen w-full flex items-center justify-center overflow-auto py-6"
-      style={{
-        background:
-          "radial-gradient(ellipse at 40% 50%, rgba(20,25,45,1) 0%, #090b10 65%)",
-      }}
+      style={{ background: "transparent" }}
     >
-      {/* Background grid texture */}
-      <div
-        className="fixed inset-0 pointer-events-none"
-        style={{
-          backgroundImage: `
-            linear-gradient(rgba(163,255,0,0.025) 1px, transparent 1px),
-            linear-gradient(90deg, rgba(163,255,0,0.025) 1px, transparent 1px)
-          `,
-          backgroundSize: "60px 60px",
-          zIndex: 0,
-        }}
-        aria-hidden="true"
-      />
 
       {/* Menu container */}
       <div

@@ -27,7 +27,7 @@ export default function RootLayout({
   return (
     <html
       lang="fr"
-      className={`${rajdhani.variable} ${orbitron.variable} h-full bg-[#090b10]`}
+      className={`${rajdhani.variable} ${orbitron.variable} h-full bg-transparent`}
     >
       <body className="h-full font-sans">{children}</body>
     </html>

@@ -24,7 +24,7 @@ export default function FooterBar() {
     height: "72px",
     background: "linear-gradient(135deg, rgba(20,24,38,0.97) 0%, rgba(12,15,24,0.99) 100%)",
     border: "1px solid rgba(180,77,255,0.2)",
-    borderRadius: "28px",
+    borderRadius: "60px",
     backdropFilter: "blur(24px)",
     boxShadow: "0 16px 50px rgba(0,0,0,0.5), 0 0 0 1px rgba(255,255,255,0.03) inset",
     position: "relative",

@@ -80,7 +80,7 @@ export default function MapCircle({ onClick }: MapCircleProps) {
       {/* Inner circle content */}
       <div
         className="absolute inset-0 rounded-full overflow-hidden"
-        style={{ background: "rgba(10,14,20,0.96)" }}
+        style={{ background: "rgba(8,11,18,1)" }}
       >
         {/* Subtle map grid lines for texture */}
         <svg

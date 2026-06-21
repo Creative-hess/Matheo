@@ -5,7 +5,7 @@
   --font-mono: var(--font-orbitron);
 
   /* Design tokens */
-  --color-bg-base:      #090b10;
+  --color-bg-base:      transparent;
   --color-bg-surface:   rgba(14,18,28,0.92);
   --color-bg-glass:     rgba(255,255,255,0.04);
   --color-border-glass: rgba(255,255,255,0.08);

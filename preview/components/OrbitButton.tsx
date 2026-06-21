@@ -46,12 +46,18 @@ export default function OrbitButton({
       onClick={onClick}
       onKeyDown={(e) => e.key === "Enter" && onClick?.()}
     >
+      {/* Dark base circle — avoids transparent bleed on light backgrounds */}
+      <div
+        className="absolute inset-0 rounded-full pointer-events-none"
+        style={{ background: "rgba(10,13,20,0.85)" }}
+      />
+
       {/* Outer ring */}
       <div
         className="absolute inset-0 rounded-full pointer-events-none"
         style={{
           border: `1.5px solid ${color}`,
-          opacity: hovered ? 0.75 : 0.35,
+          opacity: hovered ? 0.75 : 0.45,
           transform: hovered ? "scale(1.08)" : "scale(1)",
           transition: "opacity 0.3s, transform 0.3s",
         }}
@@ -63,7 +69,7 @@ export default function OrbitButton({
           width: "85%", height: "85%",
           top: "7.5%", left: "7.5%",
           border: `1px solid ${color}`,
-          opacity: hovered ? 0.5 : 0.2,
+          opacity: hovered ? 0.5 : 0.22,
           transform: hovered ? "scale(1.05)" : "scale(1)",
           transition: "opacity 0.3s, transform 0.3s",
         }}
@@ -75,8 +81,8 @@ export default function OrbitButton({
         style={{
           width: "72%",
           height: "72%",
-          background: `rgba(${rgbColor},0.15)`,
-          boxShadow: `0 0 20px rgba(${rgbColor},0.3), inset 0 0 20px rgba(${rgbColor},0.08)`,
+          background: `rgba(${rgbColor},0.18)`,
+          boxShadow: `0 0 20px rgba(${rgbColor},0.25), inset 0 0 20px rgba(${rgbColor},0.1)`,
         }}
       >
         <div
