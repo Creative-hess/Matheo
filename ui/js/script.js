@@ -44,26 +44,26 @@ const showMenu = () => {
 }
 
 document.getElementById('settings-btn').addEventListener('click', () => {
-  fetch(`https://KF_PauseMenu/settings`);
+  fetch(`https://FC_RolePlay/settings`);
 })
 
 document.getElementById('discord-btn').addEventListener('click', () => {
-  fetch(`https://KF_PauseMenu/discord`);
-  window.invokeNative("openUrl", "https://discord.gg/cDP5NsEPKq");
+  fetch(`https://FC_RolePlay/discord`);
+  window.invokeNative("openUrl", "https://discord.gg/flashcity");
 })
 
 document.getElementById('map-btn').addEventListener('click', () => {
-  fetch(`https://KF_PauseMenu/map`);
+  fetch(`https://FC_RolePlay/map`);
 })
 
 document.getElementById('exit-btn').addEventListener('click', () => {
-  fetch(`https://KF_PauseMenu/exit`);
+  fetch(`https://FC_RolePlay/exit`);
 })
 
 document.addEventListener('keydown', (event) => {
   if (event.key === 'Escape') {
     hideMenu();
-    fetch(`https://KF_PauseMenu/close`);
+    fetch(`https://FC_RolePlay/close`);
   }
 })
 
@@ -98,7 +98,7 @@ function updateParisTime() {
 }
 
 document.getElementById('menu-principal-btn').addEventListener('click', () => {
-  fetch(`https://KF_PauseMenu/menuPrincipal`);
+  fetch(`https://FC_RolePlay/menuPrincipal`);
 })
 
 document.getElementById('discord-footer-btn').addEventListener('click', () => {

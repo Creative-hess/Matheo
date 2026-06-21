@@ -15,8 +15,8 @@ const orbitron = Orbitron({
 });
 
 export const metadata: Metadata = {
-  title: "KF PauseMenu — Preview",
-  description: "Apercu du menu de pause FiveM — FlashCity",
+  title: "FC Roleplay — Menu de Pause",
+  description: "Apercu du menu de pause FiveM — FC Roleplay",
 };
 
 export default function RootLayout({

@@ -35,9 +35,9 @@ function GearIcon() {
 
 const SAMPLE = {
   name: "Giuseppe Del Papa",
-  id: "KF12345",
-  job1: "Polizia - Agente",
-  job2: "Criminale - Boss",
+  id: "FC12345",
+  job1: "Police - Agent",
+  job2: "Criminel - Boss",
 };
 
 export default function Home() {

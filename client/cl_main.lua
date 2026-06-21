@@ -13,7 +13,7 @@ if Config.EnableCommand then
   TriggerEvent('chat:removeSuggestion', '/openpausemenu')
 
   if Config.EnableKeyMapping then
-    RegisterKeyMapping(Config.Command, 'Open Pause Menu', 'keyboard', Config.KeyMapping)
+    RegisterKeyMapping(Config.Command, 'Ouvrir le menu de pause', 'keyboard', Config.KeyMapping)
   end
 end
 
@@ -41,7 +41,7 @@ function PauseMenu()
     return
   end
 
-  local playerData = lib.callback.await('KF_PauseMenu:GetPlayerData', false)
+  local playerData = lib.callback.await('FC_RolePlay:GetPlayerData', false)
   inPauseMenu = true
   hasPlayerData = true
   SendNUIMessage({
@@ -49,13 +49,13 @@ function PauseMenu()
     data = playerData
   })
   SetNuiFocus(true, true)
-  TriggerEvent('KF_PauseMenu:OpenPauseMenu', playerData)
+  TriggerEvent('FC_RolePlay:OpenPauseMenu', playerData)
   TriggerScreenblurFadeIn(5000)
 end
 
 RegisterNUICallback('ready', function(data, cb)
   isNuiReady = true
-  TriggerEvent('KF_PauseMenu:NuiReady')
+  TriggerEvent('FC_RolePlay:NuiReady')
   cb('ok')
 end)
 
@@ -67,7 +67,7 @@ RegisterNUICallback('close', function(data, cb)
   })
   
   TriggerScreenblurFadeOut(5000)
-  TriggerEvent('KF_PauseMenu:OnClose')
+  TriggerEvent('FC_RolePlay:OnClose')
 end)
 
 RegisterNUICallback('settings', function()
@@ -75,7 +75,7 @@ RegisterNUICallback('settings', function()
   TriggerScreenblurFadeOut(5000)
 
   SetNuiFocus(false, false)
-  TriggerEvent('KF_PauseMenu:OnButtonClicked', 'settings')
+  TriggerEvent('FC_RolePlay:OnButtonClicked', 'settings')
 
   SendNUIMessage({
     type = "close"
@@ -90,7 +90,7 @@ RegisterNUICallback('exit', function()
 end)
 
 RegisterNUICallback('menuPrincipal', function()
-  TriggerServerEvent('KF_PauseMenu:MenuPrincipal')
+  TriggerServerEvent('FC_RolePlay:MenuPrincipal')
   SetNuiFocus(false, false)
   SendNUIMessage({
     type = "close"
@@ -103,7 +103,7 @@ RegisterNUICallback('map', function()
   TriggerScreenblurFadeOut(5000)
   SetNuiFocus(false, false)
 
-  TriggerEvent('KF_PauseMenu:OnButtonClicked', 'map')
+  TriggerEvent('FC_RolePlay:OnButtonClicked', 'map')
 
   SendNUIMessage({
     type = "close"
@@ -124,7 +124,7 @@ CreateThread(function()
 end)
 
 RegisterNUICallback('GetDiscordAvatar', function(data, cb)
-  local discord_avatar = lib.callback.await('KF_PauseMenu:GetDiscordAvatar', false)
+  local discord_avatar = lib.callback.await('FC_RolePlay:GetDiscordAvatar', false)
   if not discord_avatar then
     return
   end

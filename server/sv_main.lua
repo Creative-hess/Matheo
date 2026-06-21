@@ -5,7 +5,7 @@ if ESX == nil and QBCore == nil then
   print('^1[ERROR]^1: Framework not set or not found. Please check your config.lua file. Current Config.Framework: ' .. tostring(Config.Framework) .. '^7')
 end
 
-lib.callback.register('KF_PauseMenu:GetPlayerData', function(src)
+lib.callback.register('FC_RolePlay:GetPlayerData', function(src)
   if Config.Framework == 'esx' then
     local xPlayer = ESX.GetPlayerFromId(src)
     local identifier = xPlayer.identifier
@@ -66,7 +66,7 @@ function RequestDiscord(discord_id)
   return Citizen.Await(prom)
 end
 
-lib.callback.register('KF_PauseMenu:GetDiscordAvatar', function(src)
+lib.callback.register('FC_RolePlay:GetDiscordAvatar', function(src)
   local discord_id = GetDiscordID(src)
   if not discord_id then return nil end
   local response = RequestDiscord(discord_id)
@@ -95,8 +95,8 @@ AddEventHandler('quitServer', function()
   Config.ExitFunction(src)
 end)
 
-RegisterServerEvent('KF_PauseMenu:MenuPrincipal')
-AddEventHandler('KF_PauseMenu:MenuPrincipal', function()
+RegisterServerEvent('FC_RolePlay:MenuPrincipal')
+AddEventHandler('FC_RolePlay:MenuPrincipal', function()
   local src = source
   if Config.Framework == 'esx' then
     TriggerClientEvent('esx_skin:openSaveableMenu', src)

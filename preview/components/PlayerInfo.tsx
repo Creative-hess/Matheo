@@ -74,19 +74,19 @@ export default function PlayerInfo({ name, id, job1, job2 }: PlayerInfoProps) {
 
       {/* Server logo */}
       <div
-        className="w-14 h-14 rounded-full flex-shrink-0 flex items-center justify-center font-mono font-bold"
+        className="w-14 h-14 rounded-full flex-shrink-0 flex items-center justify-center overflow-hidden"
         style={{
-          background: "radial-gradient(circle at 40% 40%, rgba(180,77,255,0.35), rgba(9,11,16,0.9))",
-          border: "1.5px solid rgba(180,77,255,0.4)",
-          color: "#b44dff",
-          filter: "drop-shadow(0 0 10px rgba(180,77,255,0.4))",
-          boxShadow: "0 0 20px rgba(180,77,255,0.2)",
-          fontSize: "11px",
-          letterSpacing: "1px",
+          background: "rgba(0,0,0,0)",
+          filter: "drop-shadow(0 0 14px rgba(180,77,255,0.65))",
         }}
-        aria-label="Logo serveur"
+        aria-label="Logo FC Roleplay"
       >
-        KF
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src="/logo.png"
+          alt="FC Roleplay"
+          style={{ width: "100%", height: "100%", objectFit: "contain" }}
+        />
       </div>
     </div>
   );

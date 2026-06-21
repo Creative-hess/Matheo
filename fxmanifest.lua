@@ -1,8 +1,8 @@
 fx_version 'cerulean'
 games { 'gta5' }
 
-author 'KFDevelopment - discord.gg/kfdev | Kekko_, Fonlogen'
-description 'Pause Menu'
+author 'FC Roleplay — discord.gg/flashcity'
+description 'Menu de Pause — FC Roleplay'
 
 version '1.2.0'
 
